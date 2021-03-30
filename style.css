@@ -11,6 +11,9 @@ body {
   display: flex;
   align-items: center;
   padding: 20px;
+  height: 100px;
+  border-bottom: black;
+  color: #000;
 }
 nav {
   flex: 1;
@@ -24,10 +27,12 @@ nav ul li {
   display: inline-block;
   margin-right: 20px;
 }
+nav ul li:hover {
+  color: #fb8c00;
+}
 .navbar hr {
   border: none;
-  background: black;
-  height: 1px;
+  background-color: black;
   margin: 20px 0;
 }
 .search-box .fa {
@@ -68,6 +73,7 @@ p {
   flex-basis: 50%;
   min-width: 300px;
 }
+
 .col-2 img {
   max-width: 100%;
   padding: 50px 0;
@@ -86,10 +92,12 @@ p {
   border-radius: 30px;
 }
 .btn:hover {
-  background: blue;
+  background: #fff;
+  color: #000;
 }
 .header {
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#fff, #fb8c00);
+  color: #000;
 }
 .header .row {
   margin-top: 70px;
@@ -108,6 +116,8 @@ p {
 .small-container {
   max-width: 1080px;
   margin: auto;
+  margin-left: 200px;
+  width: 1000px;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -120,12 +130,27 @@ p {
 .col-4 img {
   width: 100%;
 }
+.row .col-4:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.row {
+  height: min-content;
+}
 .title {
   text-align: center;
   margin: 0 auto 80px;
   position: relative;
-  line-height: 60px;
-  color: blue;
+  line-height: 30px;
+  width: 100%;
+  color: #000;
+  font-size: 20px;
+  background: radial-gradient(#fff, #fb8c00);
+  margin-top: 5px;
+  border-radius: 5px;
 }
 .title ::after {
   content: "";
@@ -142,6 +167,14 @@ p {
   color: #555;
   font-weight: bold;
 }
+h2 {
+  text-align: left;
+  padding: 5px;
+  color: #000;
+  background: radial-gradient(#fff, #fb8c00);
+  font-weight: normal;
+  font-family: "Ubuntu", sans-serif;
+}
 .col-4 p {
   font-size: 14px;
 }
@@ -150,12 +183,20 @@ p {
 }
 /*........offers......*/
 .offers {
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#fff, #fb8c00);
   margin: 80px;
   padding: 30px 0;
 }
-.col-2 .offers-img {
+.offers-img {
   padding: 50px;
+  width: 100px;
+}
+.offers:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 .small {
   color: #555;
@@ -211,6 +252,16 @@ p {
   filter: grayscale(0);
 }
 /*---------cart--------*/
+#small-container-cart-page {
+  background: whitesmoke;
+  width: 1000px;
+  margin-left: 100px;
+  border-radius: 5px;
+  border: black, 2px solid;
+}
+.cart-page {
+  margin-bottom: 10px;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -218,8 +269,8 @@ table {
 th {
   text-align: left;
   padding: 5px;
-  color: #fff;
-  background: #ff523b;
+  color: #000;
+  background: radial-gradient(#fff, #fb8c00);
   font-weight: normal;
   font-family: "Ubuntu", sans-serif;
 }
@@ -242,6 +293,7 @@ td a {
   border-top: 3px solid #ff523b;
   width: 100%;
   max-width: 400px;
+  margin-top: 10px;
 }
 td:last-child {
   text-align: right;
@@ -251,18 +303,25 @@ th:last-child {
 }
 .button3 {
   float: right;
-  background-color: coral;
-  color: #fff;
+  background-color: #fb8c00;
+  color: black;
+  border-radius: 3px;
+  padding: 5px;
 }
-.button3:hover {
-  background-color: blue;
+
+.btn-btn {
+  background-color: #fb8c00;
+  color: black;
+  border-radius: 3px;
+  padding: 5px;
 }
 /*............footer......*/
 .footer {
   background: #000;
   color: #8a8a8a;
   font-size: 14px;
-  padding: 60px 0 20px;
+  padding: 30px 0 20px;
+  margin-top: 50px;
 }
 .footer p {
   color: #8a8a8a;
@@ -296,6 +355,8 @@ th:last-child {
 }
 .app-logo {
   margin-top: 20px;
+  height: 5px;
+  width: 5px;
 }
 .app-logo img {
   width: 140px;
